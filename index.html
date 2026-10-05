@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>런앤건2 온라인 · Run and Gun 2 Online</title>
+<meta name="description" content="1996년 오락실 농구 게임 런앤건2(Run and Gun 2)를 MAME로 온라인 대전. 1 vs 1 · 2 vs 2, 관전, 입력 지연 자동 조절. 무료 Windows 런처.">
+<meta name="theme-color" content="#0a0b10">
+<meta property="og:type" content="website">
+<meta property="og:title" content="런앤건2 온라인 · Run and Gun 2 Online">
+<meta property="og:description" content="오락실 그 농구를 온라인으로. 1 vs 1부터 2 vs 2까지 - 무료 넷플레이 런처.">
+<meta property="og:image" content="shot_game.jpg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+<script>document.documentElement.classList.add('js');</script>
+<script src="site.js" defer></script>
+<script type="module" src="court.js"></script>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Run and Gun 2 Online">
+    <img src="favicon.svg" alt="" width="26" height="26">
+    <span>RUN&amp;GUN 2 <b>ONLINE</b></span>
+  </a>
+  <nav class="links">
+    <a href="#features" data-en="Features">특징</a>
+    <a href="#start" data-en="How to start">시작하기</a>
+    <a href="#download" class="dl" data-en="Download">다운로드</a>
+  </nav>
+  <button class="lang" id="lang" type="button" aria-label="Language">EN</button>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <canvas id="court" aria-hidden="true"></canvas>
+  <div class="hero-shade" aria-hidden="true"></div>
+
+  <div class="hero-copy">
+    <p class="eyebrow" data-en="1996 arcade basketball · now online">1996 오락실 농구 · 이제 온라인으로</p>
+    <h1>
+      <span class="h-main">RUN AND GUN 2</span>
+      <span class="h-line"><span class="h-online">ONLINE</span><span class="h-ko" data-en="Arcade netplay">런앤건2 온라인 대전</span></span>
+    </h1>
+    <p class="lede" data-en="The arcade hoops you remember, against friends anywhere. From 1-on-1 to 2-on-2 — the launcher takes you straight to the team select.">그 시절 오락실 농구를 이제 어디서든 친구와. 1 vs 1부터 2 vs 2까지, 런처가 팀 선택 화면까지 데려다 줍니다.</p>
+    <div class="cta">
+      <a class="btn primary" href="#download"><span data-en="Free download">무료 다운로드</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg></a>
+      <a class="btn ghost" href="#start" data-en="How to start">시작하는 방법</a>
+    </div>
+    <p class="meta" data-en="Windows 10 · 11 (64-bit) · free · game ROMs not included">Windows 10 · 11 (64비트) · 무료 · 게임 롬 별도</p>
+  </div>
+
+  <div class="board" aria-hidden="true">
+    <div class="cell"><span class="lbl">HOME</span><span class="num" id="score">00</span></div>
+    <div class="cell clock"><span class="lbl">SHOT</span><span class="num" id="clock">24</span></div>
+  </div>
+</section>
+
+<section class="stats" aria-label="At a glance">
+  <div class="stat"><span class="n">4</span><span class="l" data-en="players in one room">한 방 최대 인원</span></div>
+  <div class="stat"><span class="n">4</span><span class="l" data-en="spectator seats">관전석</span></div>
+  <div class="stat"><span class="n">2–8<small>F</small></span><span class="l" data-en="input delay, set by ping">핑 따라 자동 입력 지연</span></div>
+  <div class="stat"><span class="n">0<small data-en="">원</small></span><span class="l" data-en="free, no .NET to install">무료 · .NET 설치 필요 없음</span></div>
+</section>
+
+<section class="features" id="features">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">FEATURES</p>
+      <h2 data-en="Two monitors, one court">두 모니터, 하나의 코트</h2>
+      <p class="sub" data-en="The cabinet had a screen for each team. Online, every player watches his own team's screen — just like the arcade.">원래 오락실 기판은 팀마다 모니터가 따로 있었습니다. 온라인에서도 각자 자기 팀 화면으로 봅니다.</p>
+    </div>
+
+    <figure class="screens rv">
+      <img src="shot_game.jpg" width="1280" height="479" alt="Run and Gun 2 online - both team screens side by side with the netplay HUD" loading="lazy">
+      <figcaption>
+        <span data-en="Left: 1P · 2P team">왼쪽: 1P · 2P 팀 화면</span>
+        <span data-en="Right: 3P · 4P team">오른쪽: 3P · 4P 팀 화면</span>
+      </figcaption>
+    </figure>
+
+    <ul class="feat">
+      <li class="rv">
+        <h3>1 vs 1 · 2 vs 2</h3>
+        <p data-en="One player per team on his own screen, or two per team. The board's own &quot;play against the other screen&quot; match.">1 vs 1은 각자 자기 팀 모니터로, 2 vs 2는 두 명씩 한 팀. 기판 그대로의 '상대 화면과 대전' 방식입니다.</p>
+      </li>
+      <li class="rv">
+        <h3 data-en="Straight to the team select">팀 선택까지 자동</h3>
+        <p data-en="Coins, starts and the game type are played for you, on free play. A notice tells everybody to wait until the team select.">코인, 시작, 게임 방식 선택을 런처가 알아서 진행합니다. 무료 플레이라 동전도 필요 없습니다.</p>
+      </li>
+      <li class="rv">
+        <h3 data-en="Watch any match">관전</h3>
+        <p data-en="Up to four spectators, even after kick-off. Spectators see both team screens side by side.">경기 중에도 최대 4명까지 들어와서 볼 수 있습니다. 관전자는 두 팀 화면을 나란히 봅니다.</p>
+      </li>
+      <li class="rv">
+        <h3 data-en="Smooth over the internet">인터넷에서도 부드럽게</h3>
+        <p data-en="The input delay follows everybody's ping (2–8 frames) and adapts during the match. Names and pings sit on a small HUD.">입력 지연을 핑에 맞춰 2~8프레임으로 정하고 경기 중에도 조절합니다. 이름과 핑은 작은 HUD로 보여줍니다.</p>
+      </li>
+      <li class="rv">
+        <h3 data-en="Your own keys">내 키 그대로</h3>
+        <p data-en="Set your keys once in a single game. In online matches Tab, F1–F12, pause and Esc are locked, so nothing breaks the game by accident.">처음 한 번 싱글게임에서 키를 정하면 끝. 온라인 경기 중에는 Tab, F1~F12, 일시정지, Esc가 잠겨서 실수로 게임이 멈추지 않습니다.</p>
+      </li>
+      <li class="rv">
+        <h3 data-en="Server or direct">서버 또는 직접 연결</h3>
+        <p data-en="Play through the online server, or host a room on your own PC (one room, up to 4 players) and let friends join your address.">온라인 서버로 하거나, 내 PC로 방을 열어(방 1개, 최대 4명) 친구가 내 주소로 들어오게 할 수 있습니다.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="start" id="start">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="kicker">TIP-OFF</p>
+      <h2 data-en="Four steps to the court">코트까지 네 단계</h2>
+    </div>
+    <div class="start-grid">
+      <ol class="steps">
+        <li class="rv">
+          <h3 data-en="Unpack the whole zip">압축을 폴더에 모두 풀기</h3>
+          <p data-en="Do not start it from inside the zip. Korean folder names are fine.">압축 파일 안에서 바로 실행하지 마세요. 폴더 이름에 한글이 있어도 됩니다.</p>
+        </li>
+        <li class="rv">
+          <h3 data-en="Add the game ROMs">게임 롬 넣기</h3>
+          <p data-en="Put your own rungun2.zip and konamigx.zip (MAME 0.289 set) into mame\roms.">가지고 계신 rungun2.zip, konamigx.zip(MAME 0.289 기준)을 mame\roms 폴더에 넣습니다.</p>
+        </li>
+        <li class="rv">
+          <h3 data-en="Start RG2Launcher.exe">RG2Launcher.exe 실행</h3>
+          <p data-en="Pick the connection, enter a nickname and connect. The first time, a single game opens so you can set your keys.">연결 방식을 고르고 닉네임을 넣은 뒤 [접속]. 처음에는 키 설정용 싱글게임이 켜집니다.</p>
+        </li>
+        <li class="rv">
+          <h3 data-en="Ready, then tip-off">준비, 그리고 점프볼</h3>
+          <p data-en="Pick 1 vs 1 or 2 vs 2 and create a room, or join one. When everybody is ready the host starts.">대전 타입을 고르고 [방 만들기] 또는 [참가]. 모두 [준비]하면 방장이 [시작]합니다.</p>
+        </li>
+      </ol>
+      <figure class="launcher rv">
+        <img src="shot_launcher.png" width="996" height="679" alt="RG2 launcher: room list, my room and chat" loading="lazy">
+        <figcaption data-en="The launcher: room list on the left, your room and chat on the right">런처: 왼쪽은 방 목록, 오른쪽은 내 방과 채팅</figcaption>
+      </figure>
+    </div>
+
+    <div class="modes">
+      <div class="mode rv">
+        <p class="tag" data-en="ONLINE SERVER">온라인 서버</p>
+        <p data-en="Just connect. Rooms, chat and matches go through our server — no ports to open.">그대로 [접속]하면 됩니다. 방, 채팅, 경기가 서버를 거쳐서 포트를 열 필요가 없습니다.</p>
+      </div>
+      <div class="mode rv">
+        <p class="tag" data-en="HOST A ROOM">직접 연결 · 방 열기</p>
+        <p data-en="Your PC holds the room. For friends outside your home, forward TCP 7010 on your router and allow the launcher in the Windows firewall.">내 PC가 방이 됩니다. 다른 집에서 들어오려면 공유기에서 TCP 7010 포트를 열고, Windows 방화벽 창에서 허용해 주세요.</p>
+        <code>TCP 7010</code>
+      </div>
+      <div class="mode rv">
+        <p class="tag" data-en="JOIN A HOST">직접 연결 · 참가</p>
+        <p data-en="Enter the address the host gave you (address:port — the port can be left out).">방장에게 받은 주소를 넣고 [접속]. 포트를 빼면 7010으로 접속합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="download" id="download">
+  <div class="wrap">
+    <div class="dl-panel rv">
+      <div class="dl-copy">
+        <p class="kicker">DOWNLOAD</p>
+        <h2 data-en="Grab the launcher">런처 받기</h2>
+        <p class="sub" data-en="One zip: the launcher, the netplay scripts and the official MAME 0.289.">압축 파일 하나에 런처, 넷플레이 스크립트, 공식 MAME 0.289가 들어 있습니다.</p>
+        <a class="btn primary big" href="#" id="dlbtn"><span data-en="Download RG2Online.zip">RG2Online.zip 받기</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg></a>
+        <p class="dl-note" id="dlnote" hidden data-en="The download opens soon.">다운로드는 곧 열립니다.</p>
+      </div>
+      <dl class="req">
+        <div><dt data-en="System">운영체제</dt><dd data-en="Windows 10 · 11, 64-bit">Windows 10 · 11 (64비트)</dd></div>
+        <div><dt data-en="Install">설치</dt><dd data-en="None — unpack and run (.NET included)">필요 없음 · 풀어서 실행 (.NET 포함)</dd></div>
+        <div><dt data-en="Game ROMs">게임 롬</dt><dd data-en="Not included — rungun2.zip + konamigx.zip">포함 안 됨 · rungun2.zip + konamigx.zip</dd></div>
+        <div><dt data-en="PC">PC 사양</dt><dd data-en="The emulation is heavy for MAME: a very old PC may run slow">MAME에서 무거운 편이라 아주 오래된 PC는 느릴 수 있습니다</dd></div>
+      </dl>
+    </div>
+    <p class="rom-note rv" data-en="The game ROMs are not part of the download. Please use ROMs you own.">게임 롬 파일은 내려받는 파일에 들어 있지 않습니다. 직접 가지고 계신 롬을 넣어 주세요.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p data-en="A non-commercial fan project. Run and Gun 2 is a work of Konami; this site has no connection with Konami.">비상업 팬 프로젝트입니다. 런앤건2(Run and Gun 2)는 Konami의 저작물이며, 이 사이트는 Konami와 관련이 없습니다.</p>
+    <p data-en="Emulator: the official MAME 0.289 release, unmodified (GPL-2.0). Source: github.com/mamedev/mame, tag mame0289.">에뮬레이터: 공식 MAME 0.289 배포판을 수정 없이 사용합니다 (GPL-2.0). 소스: github.com/mamedev/mame, 태그 mame0289.</p>
+  </div>
+</footer>
+
+</body>
+</html>
