@@ -1,29 +1,29 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "url": "https://rg2.seibucup.online/#download",
-  "notes": "첫 공개 버전",
+  "notes": "자동 입력 지연이 핑이 좋은데도 크게 오르던 문제 수정 (순간 핑 대신 4초 중앙값, 1프레임씩 조절, 필요 이상이면 다시 내림)",
   "files": [
     {
       "path": "RG2Launcher.exe",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.0/RG2Launcher.exe",
-      "sha256": "2e6becd1c8251929d1a0c41b605e36e56f8d7ff0202ecc6f25af6fea84f5a281",
-      "size": 113179768
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.1/RG2Launcher.exe",
+      "sha256": "0eb6866ff9baf79a17dd66d8404f9f9e577c1b9474b83e77cacf84ed9cc7634b",
+      "size": 113187960
     },
     {
       "path": "netplay/rg2net.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.0/rg2net.lua",
-      "sha256": "7503ec93286958f9e60fa5090d8771b3788258ffd8b27e106b80ae4299c78bc5",
-      "size": 62449
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.1/rg2net.lua",
+      "sha256": "074a49ed1c3d1463bac07433c766300022cb85287d9d909f719ab52573c7b69e",
+      "size": 63869
     },
     {
       "path": "netplay/rg2keys.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.0/rg2keys.lua",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.1/rg2keys.lua",
       "sha256": "a23195eab7986efa719b007c18f0528be9527c4f657af7d76e60a65429d131b4",
       "size": 1273
     },
     {
       "path": "netplay/rg2solo.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.0/rg2solo.lua",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.1/rg2solo.lua",
       "sha256": "60a6fe7a8562900ae29e547a5b6e26f9b654b212078ca46efd9e526004c12d71",
       "size": 1272
     }
