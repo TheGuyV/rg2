@@ -1,29 +1,29 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "url": "https://rg2.seibucup.online/#download",
-  "notes": "공개 채팅이 서버에 남습니다. 접속하면 최근 대화 60줄이 보입니다.",
+  "notes": "런처 창이 뒤에 있거나 최소화돼 있을 때 누가 내 방에 들어오거나 관전하면 Windows 알림으로 알려 줍니다.",
   "files": [
     {
       "path": "RG2Launcher.exe",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.2/RG2Launcher.exe",
-      "sha256": "257fb13f7c01c2ed6da472ad01ccf443adae260ab43d7398d0eb22d64353233c",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.3/RG2Launcher.exe",
+      "sha256": "1c8b3d16d1dfc9f47c7bf6eed5a29241bc37450ef2d5f7b7b3371a225b2034e5",
       "size": 113196152
     },
     {
       "path": "netplay/rg2net.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.2/rg2net.lua",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.3/rg2net.lua",
       "sha256": "074a49ed1c3d1463bac07433c766300022cb85287d9d909f719ab52573c7b69e",
       "size": 63869
     },
     {
       "path": "netplay/rg2keys.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.2/rg2keys.lua",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.3/rg2keys.lua",
       "sha256": "a23195eab7986efa719b007c18f0528be9527c4f657af7d76e60a65429d131b4",
       "size": 1273
     },
     {
       "path": "netplay/rg2solo.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.2/rg2solo.lua",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.3/rg2solo.lua",
       "sha256": "60a6fe7a8562900ae29e547a5b6e26f9b654b212078ca46efd9e526004c12d71",
       "size": 1272
     }
