@@ -1,31 +1,31 @@
 {
-  "version": "1.0.4",
+  "version": "1.0.5",
   "url": "https://rg2.seibucup.online/#download",
-  "notes": "게임 스크립트 주석 정리 (기능 변경 없음)",
+  "notes": "",
   "files": [
     {
       "path": "RG2Launcher.exe",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.4/RG2Launcher.exe",
-      "sha256": "1bc68f13119a6027cbe96662f486e1e2b671e086012a182e439dff53c8569722",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.5/RG2Launcher.exe",
+      "sha256": "eb306f425844540269a78d462961e3fdc9461c2a63aef2a812502a805fed399b",
       "size": 113196152
     },
     {
       "path": "netplay/rg2net.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.4/rg2net.lua",
-      "sha256": "2f122751a1cf978364e786b5fe904e4fe3631bf6bcffe3944e0afcb6c4064810",
-      "size": 63859
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.5/rg2net.lua",
+      "sha256": "846a248c78d883bcb6ee17e0d48cf22feb7022c1606c978c177e585e68564158",
+      "size": 64339
     },
     {
       "path": "netplay/rg2keys.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.4/rg2keys.lua",
-      "sha256": "a23195eab7986efa719b007c18f0528be9527c4f657af7d76e60a65429d131b4",
-      "size": 1273
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.5/rg2keys.lua",
+      "sha256": "45a11ca28464bc43036d1b1fc9811595f3289965e2f5c888d8f9be9c192903b1",
+      "size": 1752
     },
     {
       "path": "netplay/rg2solo.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.4/rg2solo.lua",
-      "sha256": "60a6fe7a8562900ae29e547a5b6e26f9b654b212078ca46efd9e526004c12d71",
-      "size": 1272
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.5/rg2solo.lua",
+      "sha256": "98a158ddd3125b1b3a51df0b25852469fd7817f5d2f0b4a14f1cfd944255bcd3",
+      "size": 1743
     }
   ]
 }
