@@ -1,31 +1,31 @@
 {
-  "version": "1.0.5",
+  "version": "1.0.6",
   "url": "https://rg2.seibucup.online/#download",
   "notes": "",
   "files": [
     {
       "path": "RG2Launcher.exe",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.5/RG2Launcher.exe",
-      "sha256": "eb306f425844540269a78d462961e3fdc9461c2a63aef2a812502a805fed399b",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.6/RG2Launcher.exe",
+      "sha256": "93651094b8a85d5a614b4ef075df272b7a7f54df3bdd6a46b172c71aad160ad2",
       "size": 113196152
     },
     {
       "path": "netplay/rg2net.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.5/rg2net.lua",
-      "sha256": "846a248c78d883bcb6ee17e0d48cf22feb7022c1606c978c177e585e68564158",
-      "size": 64339
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.6/rg2net.lua",
+      "sha256": "0fb93989c0a09de4011e821ce46105d00138705873f08d206727ee76eb48505a",
+      "size": 64646
     },
     {
       "path": "netplay/rg2keys.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.5/rg2keys.lua",
-      "sha256": "45a11ca28464bc43036d1b1fc9811595f3289965e2f5c888d8f9be9c192903b1",
-      "size": 1752
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.6/rg2keys.lua",
+      "sha256": "3bfa3d601a1ace89265e8eb4c24ac78534f8adb65142a8529daf66f179ebe59e",
+      "size": 2059
     },
     {
       "path": "netplay/rg2solo.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.5/rg2solo.lua",
-      "sha256": "98a158ddd3125b1b3a51df0b25852469fd7817f5d2f0b4a14f1cfd944255bcd3",
-      "size": 1743
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.6/rg2solo.lua",
+      "sha256": "d367dab863e15445ecba6f577a4a51562394219e933445d1c6acb1231f05172d",
+      "size": 2047
     }
   ]
 }
