@@ -34,6 +34,6 @@
 
   // ---- download
   const dl = document.getElementById('dlbtn'), note = document.getElementById('dlnote');
-  if (DOWNLOAD_URL) dl.href = DOWNLOAD_URL;
-  else dl.addEventListener('click', ev => { ev.preventDefault(); note.hidden = false; });
+  if (dl && DOWNLOAD_URL) dl.href = DOWNLOAD_URL;
+  else if (dl) dl.addEventListener('click', ev => { ev.preventDefault(); note.hidden = false; });
 })();

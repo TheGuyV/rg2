@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>경기 기록 · 런앤건2 온라인</title>
+<meta name="description" content="런앤건2 온라인 서버에서 4쿼터까지 끝난 경기의 점수와 리플레이.">
+<meta name="theme-color" content="#0a0b10">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+  .records { padding-block: 150px 90px; min-height: 70vh; background: linear-gradient(180deg, var(--ink-2) 0%, var(--ink) 100%); }
+  .records h1 { font: 400 clamp(34px, 6vw, 56px)/1.05 var(--display-ko); letter-spacing: .01em; }
+  .how { margin-top: 18px; color: var(--muted); font-size: 15px; max-width: 760px; }
+  .how b { color: var(--text); font-weight: 700; }
+  .games { list-style: none; margin: 40px 0 0; padding: 0; display: grid; gap: 10px; }
+  .game { display: grid; grid-template-columns: 130px 1fr auto 1fr 150px 92px; align-items: center; gap: 14px;
+          padding: 14px 18px; background: var(--ink-3); border: 1px solid var(--line); border-radius: 14px; }
+  .when { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .team { font-weight: 700; overflow-wrap: anywhere; }
+  .team.l { text-align: right; }
+  .team.win { color: var(--orange-2); }
+  .score { display: flex; align-items: center; gap: 8px; font: 400 26px/1 var(--display); font-variant-numeric: tabular-nums; }
+  .score span { min-width: 54px; text-align: center; padding: 6px 8px 4px; border-radius: 8px; background: #050506;
+                color: var(--led); text-shadow: 0 0 10px rgba(255, 68, 51, .55); box-shadow: inset 0 0 0 1px rgba(255, 68, 51, .25); }
+  .score i { color: var(--muted); font-style: normal; font-size: 18px; }
+  .info { color: var(--muted); font-size: 13px; }
+  .rpl { justify-self: end; text-decoration: none; font-size: 13px; font-weight: 700; color: var(--ink); background: var(--orange);
+         padding: 7px 12px; border-radius: 999px; white-space: nowrap; }
+  .rpl:hover { background: var(--orange-2); }
+  .empty { margin-top: 40px; padding: 28px; border: 1px dashed var(--line); border-radius: 14px; color: var(--muted); }
+  @media (max-width: 860px) {
+    .game { grid-template-columns: 1fr auto 1fr; row-gap: 10px; }
+    .when { grid-column: 1 / -1; }
+    .info { grid-column: 1 / 3; }
+    .rpl { grid-column: 3; }
+  }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+<script src="site.js" defer></script>
+</head>
+<body>
+
+<header class="nav solid" id="nav">
+  <div class="family"><span class="fam-label" data-en="Family sites">패밀리 사이트</span> <a href="https://seibucup.online/" data-en="Seibu Cup Soccer Online">세이부 컵 사커 온라인</a> · <a href="https://twc98.seibucup.online/" data-en="Tecmo World Cup &#39;98 Online">테크모 월드컵 98 온라인</a> · <span class="fam-here" data-en="Run and Gun 2 Online">런앤건2 온라인</span> · <a href="https://tekkentag.seibucup.online/" data-en="Tekken Tag Online">철권 태그 온라인</a></div>
+  <a class="brand" href="index.html" aria-label="Run and Gun 2 Online">
+    <img src="favicon.svg" alt="" width="26" height="26">
+    <span>RUN&amp;GUN 2 <b>ONLINE</b></span>
+  </a>
+  <nav class="links">
+    <a href="index.html#features" data-en="Features">특징</a>
+    <a href="results.html" data-en="Results">경기 기록</a>
+    <a href="index.html#download" class="dl" data-en="Download">다운로드</a>
+  </nav>
+  <button class="lang" id="lang" type="button" aria-label="Language">EN</button>
+</header>
+
+<main class="records">
+  <div class="wrap">
+    <p class="kicker">BOX SCORES</p>
+    <h1 data-en="Results">경기 기록</h1>
+    <p class="how" data-en="Online-server matches played through all four quarters show up here by themselves, with the replay. To watch one, download it and open it in the launcher: <b>Game &gt; Replays &gt; Open file</b>.">온라인 서버에서 4쿼터까지 끝난 경기가 리플레이와 함께 자동으로 올라옵니다. 보려면 리플레이를 받은 뒤 런처의 <b>게임 &gt; 리플레이 보기 &gt; 파일 열기</b>로 여세요.</p>
+    <ul class="games" id="games"></ul>
+    <p class="empty" id="empty" hidden data-en="No results yet. The first match played to the end will be here.">아직 기록이 없습니다. 끝까지 치른 첫 경기가 여기에 올라옵니다.</p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p data-en="Nicknames, scores and replays of matches played to the end on the online server are shown here. Matches through a direct connection are not.">온라인 서버에서 끝까지 치른 경기의 닉네임, 점수, 리플레이가 이 페이지에 공개됩니다. 직접 연결로 한 경기는 올라오지 않습니다.</p>
+    <p data-en="A non-commercial fan project. Run and Gun 2 is a work of Konami; this site has no connection with Konami.">비상업 팬 프로젝트입니다. 런앤건2(Run and Gun 2)는 Konami의 저작물이며, 이 사이트는 Konami와 관련이 없습니다.</p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const list = document.getElementById('games'), empty = document.getElementById('empty');
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+  const en = () => document.documentElement.lang === 'en';
+  let data = [];
+  function team(n, a, b) { return [n[a], n[b]].filter(x => x).map(esc).join(', ') || '-'; }
+  function render() {
+    list.innerHTML = '';
+    empty.hidden = data.length > 0;
+    for (const r of data) {
+      const n = Array.isArray(r.nicks) ? r.nicks.map(String) : [];
+      const s = Array.isArray(r.score) ? [Number(r.score[0]) || 0, Number(r.score[1]) || 0] : [0, 0];
+      const secs = Number(r.secs) || 0, mins = Math.round(secs / 60);
+      const ok = typeof r.replay === 'string' && /^replays\/[\w.-]+\.rg2rpl$/.test(r.replay);
+      const li = document.createElement('li'); li.className = 'game';
+      li.innerHTML =
+        '<span class="when">' + esc(r.when) + '</span>' +
+        '<span class="team l' + (s[0] > s[1] ? ' win' : '') + '">' + team(n, 0, 1) + '</span>' +
+        '<span class="score"><span>' + s[0] + '</span><i>:</i><span>' + s[1] + '</span></span>' +
+        '<span class="team' + (s[1] > s[0] ? ' win' : '') + '">' + team(n, 2, 3) + '</span>' +
+        '<span class="info">' + (r.type === '2v2' ? '2 vs 2' : '1 vs 1') + ' · ' + (en() ? mins + ' min' : mins + '분') + '</span>' +
+        (ok ? '<a class="rpl" href="' + esc(r.replay) + '" download>' + (en() ? 'Replay' : '리플레이') + '</a>' : '<span></span>');
+      list.appendChild(li);
+    }
+  }
+  fetch('results.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : []).then(j => { data = Array.isArray(j) ? j : []; render(); })
+    .catch(() => { data = []; render(); });
+  document.getElementById('lang').addEventListener('click', () => setTimeout(render, 0));
+})();
+</script>
+</body>
+</html>

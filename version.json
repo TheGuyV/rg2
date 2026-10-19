@@ -1,35 +1,35 @@
 {
-  "version": "1.0.7",
+  "version": "1.0.8",
   "url": "https://rg2.seibucup.online/#download",
-  "notes": "리플레이: 온라인 경기가 자동으로 저장되고, 게임 > 리플레이 보기에서 다시 볼 수 있습니다.",
+  "notes": "경기 기록: 서버에서 4쿼터까지 끝난 경기가 사이트 경기 기록에 리플레이와 함께 올라갑니다. 리플레이 목록에 점수와 파일 열기 추가.",
   "files": [
     {
       "path": "RG2Launcher.exe",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.7/RG2Launcher.exe",
-      "sha256": "872e3df06e70d6419173ea6ee7ad3dc6704ff82e93341b5d3671f588b2958acd",
-      "size": 113204344
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.8/RG2Launcher.exe",
+      "sha256": "81008f1193a4ed72300c39963cb5087db3eb1fb61ba193d56d1d84cb96ff4f7d",
+      "size": 113220728
     },
     {
       "path": "netplay/rg2net.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.7/rg2net.lua",
-      "sha256": "5f9ebf9f16e5362647ffa4db8aa08c08fc3f9b327bd39ae51cd16428a8c1dad3",
-      "size": 69654
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.8/rg2net.lua",
+      "sha256": "30a6f635eb2ee8226110c09cca2388d23c52cc20a8cdd9d64aa6141e895095a0",
+      "size": 71096
     },
     {
       "path": "netplay/rg2keys.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.7/rg2keys.lua",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.8/rg2keys.lua",
       "sha256": "3bfa3d601a1ace89265e8eb4c24ac78534f8adb65142a8529daf66f179ebe59e",
       "size": 2059
     },
     {
       "path": "netplay/rg2solo.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.7/rg2solo.lua",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.8/rg2solo.lua",
       "sha256": "d367dab863e15445ecba6f577a4a51562394219e933445d1c6acb1231f05172d",
       "size": 2047
     },
     {
       "path": "netplay/rg2play.lua",
-      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.7/rg2play.lua",
+      "url": "https://github.com/TheGuyV/rg2/releases/download/v1.0.8/rg2play.lua",
       "sha256": "ef6bf81cf5f7b3c45bd7278c016f48b465073d0b4c97354da8b502c60731613a",
       "size": 9540
     }
